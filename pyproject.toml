@@ -1,0 +1,17 @@
+[project]
+name = "heartopia-lab"
+version = "0.1.0"
+description = "Heartopia Auto-Cooker and utility scripts"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyautogui>=0.9.54",
+    "opencv-python>=4.8.0.76",
+    "numpy>=1.24.0",
+    "PyQt5>=5.15.9",
+    "pywin32>=306",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
