@@ -68,7 +68,26 @@ pip install pyautogui opencv-python numpy PyQt5 pywin32
 python cook_bot_v2.py
 ```
 
+
+**Usage — Game Setup & Running the Bot**
+
+Follow these steps to prepare the game and run the bot safely:
+
+- **Set window mode:** Put the game into windowed mode (not fullscreen) so overlays and coordinate matching work reliably.
+- **Place 2 stoves:** Arrange exactly two stoves where you want automation to run; the bot expects two stove icons to operate on.
+- **Run the script:** Launch the bot using `uv run cook_bot_v2.py` or `python cook_bot_v2.py` from a prepared environment.
+- **Position the red search box:** Use the bot's overlay/GUI to move the red search box so it fully covers the two action/icon areas on those stoves (the small menu/action icons). The box must encompass both icons.
+- **Behavior & `MODES`:** The bot will automatically choose the last menu option on each stove to perform `order`, `cook`, or `harvest` depending on the `MODES` variable inside `cook_bot_v2.py`.
+- **Assistant Chef (cook-only):** If you want the bot to only cook (not order or harvest), set `MODES` accordingly (for example: `MODES = ['cook']`) in `cook_bot_v2.py`.
+
+**Troubleshooting**
+
+- Ensure your display scale and UI theme match the images in `assets/` for reliable matching.
+- If detection fails, re-capture the specific stove/icon templates into the appropriate `assets/` subfolder.
+- Test with a small area first and watch the bot run to confirm the red search box and matches look correct.
+
 **Notes & Tips**
+
 - Scripts rely on image matching; ensure the images in `assets/` match your display scale and theme.
 - If you need to capture coordinates or color samples, recreate a small helper using `pyautogui.position()` and `pyautogui.pixel()`.
 - If `pyautogui` raises ImageNotFound errors, update or handle exceptions in the calling script.
