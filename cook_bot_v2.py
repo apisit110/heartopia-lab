@@ -30,14 +30,16 @@ MODES.append('harvest')
 # Target image dictionary for each mode
 MODE_IMAGES = {
     'cook': [
-        'assets/cook/cook_button_1.png',
-        'assets/cook/cook_button_2.png',
-        'assets/cook/cook_button_3.png',
-        'assets/cook/cook_button_4.png',
-        'assets/cook/cook_button_5.png',
-        'assets/cook/cook_button_6.png',
-        'assets/cook/cook_button_7.png',
-        'assets/cook/cook_button_8.png'
+        # 'assets/cook/cook_button_1.png',
+        # 'assets/cook/cook_button_2.png',
+        # 'assets/cook/cook_button_3.png',
+        # 'assets/cook/cook_button_4.png',
+        # 'assets/cook/cook_button_5.png',
+        # 'assets/cook/cook_button_6.png',
+        # 'assets/cook/cook_button_7.png',
+        'assets/cook/cook_button_8.png',
+        'assets/cook/cook_button_9-1.png',
+        'assets/cook/cook_button_9-2.png'
     ],
     'order': [
         'assets/order/order_button_1.png'
@@ -58,7 +60,7 @@ TARGET_IMAGES = []
 for mode in MODES:
     TARGET_IMAGES.extend(MODE_IMAGES.get(mode, []))
 # Accuracy threshold (0.02 to 0.25). 0.9 is usually the "sweet spot"
-CONFIDENCE_LEVEL = 0.6 
+CONFIDENCE_LEVEL = 0.7 
 # --- SCREEN SETTINGS ---
 # Get actual screen resolution dynamically
 SCREEN_WIDTH, SCREEN_HEIGHT = pyautogui.size()
